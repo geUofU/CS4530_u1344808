@@ -12,8 +12,16 @@ interface CourseDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertCourse(course: CourseEntity)
 
-    @Delete
-    suspend fun deleteCourse(course: CourseEntity)
+    suspend fun deleteCourse(course: CourseEntity){
+        val courseNum = course.courseNumber
+        val department = course.department
+        val location = course.location
+        deleteCourseActual(department, courseNum, location)
+    }
+
+    @Query("delete from courses where department = :department AND courseNumber = :courseNum " +
+            "AND location = :location")
+    suspend fun deleteCourseActual(department: String, courseNum: String, location: String)
 
     @Query("select * from courses order by id desc")
     fun getAllCourses():Flow<List<CourseEntity>>

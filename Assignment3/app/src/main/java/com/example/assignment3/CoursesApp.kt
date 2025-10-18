@@ -2,17 +2,17 @@ package com.example.assignment3
 
 import android.app.Application
 import androidx.room.Room
-import com.example.assignment3.room.AppDatabase
+import com.example.assignment3.room.CoursesDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
-class CoursesApp: Application(){
-val scope = CoroutineScope(SupervisorJob())
+class CoursesApp : Application() {
+    val scope = CoroutineScope(SupervisorJob())
 
     val db by lazy {
         Room.databaseBuilder(
             applicationContext,
-            AppDatabase::class.java,
+            CoursesDatabase::class.java,
             "myDB"
         ).build()
     }
