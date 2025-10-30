@@ -4,10 +4,11 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     //needed for serialization
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.example.Assignment4"
+    namespace = "com.example.funfacts"
     compileSdk = 36
 
     defaultConfig {
@@ -61,6 +62,11 @@ dependencies {
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.kotlinx.serialization.json)
+
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+    implementation("androidx.navigation:navigation-compose:2.7.2")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

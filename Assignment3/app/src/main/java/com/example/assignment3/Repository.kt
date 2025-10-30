@@ -24,5 +24,5 @@ class Repository (val scope: CoroutineScope, private val dao: CourseDao){
             val courseObj = CourseEntity(department = dep, courseNumber = num, location = loc)
             dao.deleteCourse(courseObj)
         }
-    }
+        }
 }

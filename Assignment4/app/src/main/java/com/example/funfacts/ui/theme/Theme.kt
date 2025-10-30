@@ -1,4 +1,4 @@
-package com.example.httpreqdemo.ui.theme
+package com.example.funfacts.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

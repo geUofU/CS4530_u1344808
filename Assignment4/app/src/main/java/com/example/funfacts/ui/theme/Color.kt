@@ -1,4 +1,4 @@
-package com.example.httpreqdemo.ui.theme
+package com.example.funfacts.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

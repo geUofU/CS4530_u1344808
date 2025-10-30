@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Assignment4"
+rootProject.name = "FunFacts"
 include(":app")

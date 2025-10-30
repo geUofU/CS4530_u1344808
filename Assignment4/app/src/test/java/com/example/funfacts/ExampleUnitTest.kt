@@ -1,4 +1,4 @@
-package com.example.httpreqdemo
+package com.example.funfacts
 
 import org.junit.Test
 
